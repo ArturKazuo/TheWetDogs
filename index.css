@@ -21,7 +21,7 @@ a{
     transition: 0.1s ease-in-out;
 }
 
-a:hover{
+nav ul a:hover{
     color: whitesmoke !important;
 }
 
