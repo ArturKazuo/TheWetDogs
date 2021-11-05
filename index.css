@@ -10,6 +10,8 @@ h1{
     font-size: 2.0rem;
     text-align: center;
     margin: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 a{
@@ -76,6 +78,27 @@ nav img{
     display: flex;
     align-items: center;
 }
+
+.carouselCenter{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo1 h1,.titulo2 h1,.titulo3 h1,.titulo4 h1{
+    max-width: -webkit-fill-available;
+}
+
+.sobreDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobreDiv img{
+    width: 600px;
+    margin-bottom: 20px;
+}
+
 
 /******************************************** fade in left *******************************************************/
 
@@ -287,4 +310,18 @@ nav img{
         opacity: 0;
         transform: translateX(-50px);
     }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    margin: 0px;
+}
+
+footer img{
+    max-height: 50px;
 }
