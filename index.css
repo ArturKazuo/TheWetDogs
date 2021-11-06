@@ -15,21 +15,16 @@ h1{
 }
 
 a{
-    background-color: #31394c;
+    color: #0f2032 !important;
     padding: 10px;
     margin: 2.5px;
     border-radius: 4px;
-    box-shadow: 0 4px #0f2032;
     transition: 0.1s ease-in-out;
+    font-size: 1.3rem;
 }
 
 nav ul a:hover{
-    color: whitesmoke !important;
-}
-
-a:active{
-    transform: translateY(4px);
-    box-shadow: 0 0 #0f2032;
+    color: #0f2032 !important;
 }
 
 html{
@@ -106,23 +101,21 @@ nav img{
 }
 
 .cardDiv{
-    border: 1.5px solid #ed593b;
-    border-radius: 10px;
-    padding: 20px 0 20px 0;
+    position: relative;
     transition: 0.5s ease-in-out;
 }
 
 .linksContatos{
-    height: 0px;
-    overflow: hidden;
     z-index: 1;
-    transform: translateY(0);
     transition: 0.5s ease-in-out;
-}
-
-.cardDiv:hover > .linksContatos{
-    transform: translateY(100px);
-    overflow: visible;
+    position: absolute;
+    transform: rotateY(-180deg);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
 .imgContatos{
@@ -130,7 +123,28 @@ nav img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 2;
+    position: relative;
+    transform: rotateY(0deg);
+}
+
+.imgContatos, .linksContatos{
+    backface-visibility: hidden;
+    width: 261px;
+    height: 226px;
+    border: 1.5px solid #ed593b;
+    border-radius: 10px;
+    padding: 20px 0 20px 0;
+    transition: 0.5s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.col-6.col-lg-3:hover .linksContatos{
+    transform: rotateY(0deg);
+}
+
+.col-6.col-lg-3:hover .imgContatos{
+    transform: rotateY(180deg);
 }
 
 .imgContatos img{
@@ -143,6 +157,10 @@ nav img{
     margin-top: 20px;
     color: #ed593b;
     font-size: 1.3rem;
+}
+
+.linksContatos a i {
+    color: #ed593b;
 }
 
 /******************************************** fade in left *******************************************************/
