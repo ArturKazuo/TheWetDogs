@@ -130,7 +130,7 @@ nav img{
 
 .imgContatos, .linksContatos{
     backface-visibility: hidden;
-    width: 261px;
+    width: 100%;
     height: 226px;
     border: 1.5px solid #ed593b;
     border-radius: 10px;
@@ -462,6 +462,10 @@ hr{
     nav{
         align-items: center;
 
+    }
+
+    footer img{
+        display: none;
     }
 
 }
