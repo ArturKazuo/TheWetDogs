@@ -70,6 +70,12 @@ nav img{
     color: whitesmoke;
 }
 
+/*************** menu label ********************************/
+
+.menuLabel{
+    display: none;
+}
+
 .imgDiv img{
     max-width: 100%;
 }
@@ -99,6 +105,45 @@ nav img{
     margin-bottom: 20px;
 }
 
+.cardDiv{
+    border: 1.5px solid #ed593b;
+    border-radius: 10px;
+    padding: 20px 0 20px 0;
+    transition: 0.5s ease-in-out;
+}
+
+.linksContatos{
+    height: 0px;
+    overflow: hidden;
+    z-index: 1;
+    transform: translateY(0);
+    transition: 0.5s ease-in-out;
+}
+
+.cardDiv:hover > .linksContatos{
+    transform: translateY(100px);
+    overflow: visible;
+}
+
+.imgContatos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.imgContatos img{
+    border-radius: 50%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.imgContatos i{
+    margin-top: 20px;
+    color: #ed593b;
+    font-size: 1.3rem;
+}
 
 /******************************************** fade in left *******************************************************/
 
@@ -314,8 +359,9 @@ nav img{
 
 footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 footer p{
@@ -324,4 +370,80 @@ footer p{
 
 footer img{
     max-height: 50px;
+}
+
+hr{
+    width: 90%;
+    height: 1.5px !important;
+    color: #ed593b;
+}
+
+#menuCheck{
+    display: none;
+}
+
+#menuCheck:checked ~ label i:nth-child(2){
+    display: block;
+}
+
+#menuCheck:checked ~ label i:first-child{
+    display: none;
+}
+
+#menuCheck:not(checked) ~ label i:nth-child(2){
+    display: none;
+}
+
+#menuCheck:not(checked) ~ label i:first-child{
+    display: block;
+}
+
+#menuCheck:checked ~ .menuUl{
+    transform: translateX(100%);
+}
+
+/************************************************************************************************************************************************/
+
+@media  screen and (min-width:577px) {
+    .mobileLogo{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:576px) {
+
+    .mobileLogo{
+        display: block;
+    }
+
+    .desktopLogo{
+        display: none;
+    }
+    
+    .menuUl{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0 20px 0;
+        z-index: -1;
+        position: absolute;
+        background-color: #ed593b;
+        left: -100%;
+        top: 99%;
+        transition: 0.5s ease-in-out;
+    }
+
+    .menuLabel{
+        display: block;
+        z-index: 99;
+        font-size: 1.5rem;
+    }
+
+    nav{
+        align-items: center;
+
+    }
+
 }
