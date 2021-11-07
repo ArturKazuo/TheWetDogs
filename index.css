@@ -103,6 +103,7 @@ nav img{
 .cardDiv{
     position: relative;
     transition: 0.5s ease-in-out;
+    margin-bottom: 10px;
 }
 
 .linksContatos{
@@ -141,6 +142,7 @@ nav img{
 
 .col-6.col-lg-3:hover .linksContatos{
     transform: rotateY(0deg);
+    box-shadow: 4px 4px 10px black;
 }
 
 .col-6.col-lg-3:hover .imgContatos{
